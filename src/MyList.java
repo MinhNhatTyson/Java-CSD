@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Node;
+
 
 /**
  *
@@ -25,13 +25,22 @@ public class MyList {
     public void clear(){
         head = tail = null;
     }
-    public void add(int x){
+    public void addToTail(int x){
         if(isEmpty()){
             head = tail = new Node(x, null);
         }else{
             Node y = new Node(x, null);
             tail.next = y; 
             tail = y;
+        }
+    }
+    public void addToHead(int x){
+        if(isEmpty()){
+            head = tail = new Node(x, null);
+        }else{
+            Node y = new Node(x);
+            y.setNext(head);
+            head = y
         }
     }
     public void traverse(){
@@ -42,22 +51,15 @@ public class MyList {
         }
         System.out.println();
     }
-    public void addToHead(int x) {
-        if (isEmpty()) {
-            head = tail = new Node(x, null);
-        } else {
-            Node y = new Node(x, null);
-            y.setNext(head);
-            head = y;
-        }
-    }
-    public void delete(int x){
+    public void deleteFromHead(int x){
         if(isEmpty()){
             System.out.println("There is nothing to be deleted");
             
         }else{
+            Node y = new Node(x);
+            y = head;
             head = head.next;
-            
+            y.next = null;
         }
     }
     
