@@ -19,5 +19,24 @@ public class Node {
         this.next = y;
     }
     
-   
+  
+    Node(int info) {
+        this(info, null);
+    }
+
+    public int getInfo() {
+        return info;
+    }
+
+    public void setInfo(int info) {
+        this.info = info;
+    }
+
+    public Node getNext() {
+        return next;
+    }
+
+    public void setNext(Node next) {
+        this.next = next;
+    }
 }
