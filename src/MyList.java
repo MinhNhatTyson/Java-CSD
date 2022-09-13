@@ -1,3 +1,6 @@
+
+import Node.Node;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -30,7 +33,7 @@ public class MyList {
             head = tail = new Node(x, null);
         }else{
             Node y = new Node(x, null);
-            tail.next = y; 
+            tail.setNext(y); 
             tail = y;
         }
     }
@@ -40,7 +43,7 @@ public class MyList {
         }else{
             Node y = new Node(x);
             y.setNext(head);
-            head = y
+            head = y;
         }
     }
     public void traverse(){
