@@ -18,6 +18,11 @@ public class Node {
         this.info = x;
         this.next = y;
     }
+    
+  
+    Node(int info) {
+        this(info, null);
+    }
 
     public int getInfo() {
         return info;
@@ -34,6 +39,4 @@ public class Node {
     public void setNext(Node next) {
         this.next = next;
     }
-    
-   
 }
