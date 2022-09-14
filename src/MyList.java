@@ -91,13 +91,21 @@ public class MyList {
         }
     }
     public void dele(int x){
+        int pos = 0;
+        Node prev = head;
+        
         if(isEmpty()){
             System.out.println("The list is empty");
         }else{
             Node curr = head;
             while(curr.next != null){
+                pos++;
                 if(curr.getInfo() == x){
-                    
+                    for(int i = 0; i< pos; i++){
+                        if(i == pos -1){
+                            prev.next = curr.next;
+                        }
+                    }
                 }
             }
         }
