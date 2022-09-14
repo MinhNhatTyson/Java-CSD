@@ -110,5 +110,23 @@ public class MyList {
             }
         }
     }
+    public void sort(){
+        Node curr = head;
+        Node index = head;
+        int temp;
+        while(curr!= null){
+            index = curr.next;
+            while(index!=null){
+                if(curr.getInfo() > index.getInfo()){
+                    temp = curr.getInfo();
+                    curr.setInfo(index.getInfo());
+                    index.setInfo(temp);
+                }
+                index = index.next;
+                curr = curr.next;
+            }
+        }
+    }
+    
     
 }
